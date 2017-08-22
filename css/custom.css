@@ -1,0 +1,7 @@
+.cols {
+    display: flex;
+    align-items: center;
+}
+.cols > div {
+  flex: 1;
+}
