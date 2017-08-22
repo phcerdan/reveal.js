@@ -11,6 +11,8 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Local font-awesome -->
+		<link rel="stylesheet" href="my_plugins/font-awesome/css/font-awesome.min.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +26,35 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Open and Reproducible Research: Tools</h2>
+					<p> Pablo H.Cerdan</p>
+					<ul style="list-style-type:none">
+						<li>PhD. Student in Biophysics</li>
+						<li>IFS Computing Support</li>
+					</ul>
+					<p>
+					<i class="fa fa-github fa-lg" aria-hidden="true"></i> 
+					<a target="_blank" href="http://github.com/phcerdan">phcerdan</a>
+					</p>
+					<p>
+					<i class="fa fa-envelope" aria-hidden="true"></i> 
+					<a href="mailto:p.hernandezcerdan@massey.ac.nz">p.hernandezcerdan@massey.ac.nz</a>
+					</p>
+				</section>
+				<section>
+					<h2>Tools</h2>
+					<ul>
+						<li class="fragment">Bibliography Manager: <a href="https://www.zotero.org/">Zotero</a></li>
+						<li class="fragment">Collaborative \(\LaTeX\): <a href="https://www.overleaf.com/">Overleaf</a>, <a href="https://www.sharelatex.com/">ShareLatex</a></li>
+						<li class="fragment">Open source development: <a href="https://github.com/">Github</a></li>
+						<li class="fragment">Reproducibile research: <a href="http://jupyter.org/">jupyter notebooks</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Bibliography Manager</h2>
+				</section>
+				<section>Slide 3</section>
 			</div>
 		</div>
 
@@ -37,11 +66,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					mathjax: 'node_modules/mathjax/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// MathJax
+					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
 		</script>
